@@ -3,8 +3,11 @@
 
   become: true
   tasks:
-    - name: update apt packages
+    - name: Update packages with apt
       apt:
-        upgrade: yes
         update_cache: yes
+
+    - name: Upgrade packages with apt
+      apt:
+        upgrade: dist
         
